@@ -129,7 +129,7 @@
       text-transform: uppercase; color: rgba(255,255,255,0.75); transition: color 0.2s;
     }
     .mobile-overlay a:hover { color: var(--white); }
-    .mobile-overlay .btn-red { font-size: 0.9rem; padding: 14px 36px; }
+    .mobile-overlay .btn-red { font-size: 2.4rem; padding: 14px 36px; }
 
     /* ============================================================
        BUTTONS — unified
@@ -935,7 +935,7 @@
         }
         video.load();
         var p = video.play();
-        if (p !== undefined) { p.catch(function(){}); }
+        if (p !== undefined) { p.catch(function(){ video.style.display = 'none'; }); }
       }
       var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
