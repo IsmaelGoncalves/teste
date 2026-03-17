@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preload" as="image" href="assets/img/logo-nav.png" fetchpriority="high">
+  <title>Tech Racing | Acessórios para UTV</title>
+  <meta name="description" content="A Tech Racing fabrica acessórios para os principais UTVs do mercado brasileiro. Suporte JBL Boombox, bolsa de teto, manopla de câmbio e saca parafuso CVT. Loja oficial verificada no Mercado Livre com entrega para todo o Brasil.">
+  <meta name="keywords" content="acessórios UTV, suporte JBL Boombox UTV, bolsa teto UTV, suporte caixa som Can-Am, acessórios Polaris UTV, Tech Racing, loja acessórios UTV Brasil">
+  <meta property="og:title" content="Tech Racing | Fabricante de Acessórios para UTV">
+  <meta property="og:description" content="Acessórios projetados e fabricados pela Tech Racing para os principais UTVs do mercado. Encaixe preciso, qualidade verificada. Loja oficial no Mercado Livre.">
+  <link rel="canonical" href="https://ismaelgoncalves.github.io/teste/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://ismaelgoncalves.github.io/teste/assets/img/og-image.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:url" content="https://ismaelgoncalves.github.io/teste/">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Store","name":"Tech Racing","description":"Fabricante e loja especializada em acessórios para UTV. Produtos compatíveis com Can-Am, Polaris, CF Moto e Yamaha.","url":"https://www.mercadolivre.com.br/loja/tech-racing","sameAs":["https://www.instagram.com/tech_racing_off_road/","https://www.youtube.com/@TechRacingOffRoadoficial","https://www.mercadolivre.com.br/loja/tech-racing"]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"O suporte JBL da Tech Racing serve para qual modelo de UTV?","acceptedAnswer":{"@type":"Answer","text":"Compatível com os principais modelos. Informe seu modelo via WhatsApp para confirmarmos antes da compra."}},{"@type":"Question","name":"Os acessórios são compatíveis com Can-Am e Polaris?","acceptedAnswer":{"@type":"Answer","text":"Sim. Desenvolvidos para Can-Am, Polaris, CF Moto e Yamaha. A compatibilidade pode variar por versão — recomendamos confirmar com nossa equipe."}},{"@type":"Question","name":"Como comprar? A entrega é para todo o Brasil?","acceptedAnswer":{"@type":"Answer","text":"Todos os produtos estão na loja oficial do Mercado Livre. Compra protegida, pagamento parcelado, entrega rastreada para todo o Brasil."}},{"@type":"Question","name":"A Tech Racing fabrica os próprios produtos?","acceptedAnswer":{"@type":"Answer","text":"Sim. Desenvolvemos e fabricamos nossos próprios acessórios, com controle total sobre qualidade, encaixe e acabamento."}}]}
+  </script>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;800&family=Inter:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;800&family=Inter:wght@400;500;600&display=swap"></noscript>
+  
+  <style>
+    :root {
+      --black: #0A0A0A;
+      --dark: #111111;
+      --card-dark: #1C1C1C;
+      --red: #ED1C24;
+      --red-hover: #CC1219;
+      --white: #FFFFFF;
+      --gray: #999999;
+      --border: rgba(255,255,255,0.08);
+      --nav-h: 64px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background-color: var(--black); color: var(--white); overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      height: var(--nav-h);
+      background: #0A0A0A;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center;
+      padding: 0 clamp(16px, 4vw, 72px);
+      gap: 32px;
+    }
+
+    .nav-logo-img {
+      height: 44px; width: auto; display: block; object-fit: contain; flex-shrink: 0; mix-blend-mode: screen;
+    }
+
+    .nav-links {
+      display: flex; align-items: center; gap: 28px; list-style: none;
+      margin-left: auto;
+    }
+    .nav-links a {
+      font-size: 0.82rem; font-weight: 500; color: rgba(255,255,255,0.65);
+      letter-spacing: 0.04em; white-space: nowrap; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-cta {
+      display: inline-block; background: var(--red); color: var(--white);
+      border-radius: 4px; padding: 9px 20px; font-weight: 700; font-size: 0.75rem;
+      text-transform: uppercase; letter-spacing: 0.08em; border: none; cursor: pointer;
+      transition: background 0.2s ease, transform 0.25s ease, box-shadow 0.25s ease; white-space: nowrap; flex-shrink: 0;
+    }
+    .nav-cta:hover { background: var(--red-hover); transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.25); }
+
+    /* Hamburger */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; margin-left: auto; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--white); transition: all 0.3s; transform-origin: left; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg); }
+
+    /* Mobile overlay */
+    .mobile-overlay {
+      display: none; position: fixed; inset: 0; background: var(--black); z-index: 999;
+      flex-direction: column; align-items: center; justify-content: center; gap: 28px;
+      opacity: 0; transition: opacity 0.3s; pointer-events: none;
+    }
+    .mobile-overlay.open { opacity: 1; pointer-events: auto; }
+    .mobile-overlay a {
+      font-family: 'Barlow Condensed', sans-serif; font-size: 2.4rem; font-weight: 800;
+      text-transform: uppercase; color: rgba(255,255,255,0.75); transition: color 0.2s;
+    }
+    .mobile-overlay a:hover { color: var(--white); }
+    .mobile-overlay .btn-red { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 800; padding: 16px 32px; letter-spacing: 0.08em; width: 80%; text-align: center; }
+
+    .btn-red {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--red); color: var(--white); border-radius: 4px;
+      padding: 12px 24px; font-weight: 700; font-size: 0.82rem;
+      text-transform: uppercase; letter-spacing: 0.08em; border: none; cursor: pointer;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s; white-space: nowrap;
+      -webkit-tap-highlight-color: transparent; touch-action: manipulation;
+    }
+    .btn-red:hover { background: var(--red-hover); transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.25); }
+
+    .btn-outline {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: transparent; color: var(--white); border-radius: 4px;
+      padding: 12px 24px; font-weight: 700; font-size: 0.82rem;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      border: 1.5px solid rgba(255,255,255,0.4); cursor: pointer;
+      transition: border-color 0.2s, background 0.2s; white-space: nowrap;
+      -webkit-tap-highlight-color: transparent; touch-action: manipulation;
+    }
+    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.05); }
+
+    /* Product card button — full width, dark bg, red on hover */
+    .btn-card {
+      display: flex; align-items: center; justify-content: center; text-align: center;
+      width: 100%; background: var(--black); color: var(--white);
+      border-radius: 4px; padding: 11px 16px; font-weight: 700; font-size: 0.78rem;
+      text-transform: uppercase; letter-spacing: 0.06em; border: none; cursor: pointer;
+      transition: background 0.2s, color 0.2s, transform 0.2s; margin-top: 14px;
+      white-space: normal; line-height: 1.3;
+      -webkit-tap-highlight-color: transparent; touch-action: manipulation;
+    }
+    .btn-card:hover { background: var(--red); color: var(--white); transform: scale(1.02); box-shadow: 0 4px 12px rgba(0,0,0,0.25); }
+
+    #hero {
+      position: relative; height: calc(100vh - var(--nav-h)); min-height: 540px; overflow: hidden;
+      display: flex; align-items: center; justify-content: flex-start;
+    }
+    #hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; background-color: #0A0A0A; }
+    #hero-video::-webkit-media-controls { display: none !important; }
+    #hero-video::-webkit-media-controls-enclosure { display: none !important; }
+    #hero-video::-webkit-media-controls-panel { display: none !important; }
+    #hero-video::-webkit-media-controls-play-button { display: none !important; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.88) 35%, rgba(0,0,0,0.25) 100%); z-index: 2; }
+    .hero-bottom-fade { position: absolute; bottom: 0; left: 0; right: 0; height: 35%; background: linear-gradient(to top, #0A0A0A 0%, transparent 100%); z-index: 3; }
+    .hero-content { position: relative; z-index: 10; padding: 0 clamp(20px, 6vw, 100px); max-width: 760px; }
+    .hero-label { display: inline-block; color: var(--red); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; margin-bottom: 14px; }
+    .hero-h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(2.6rem, 4.5vw, 4.8rem); color: var(--white); line-height: 0.95; text-transform: uppercase; letter-spacing: -0.02em; }
+    .hero-h1 .accent { color: var(--red); }
+    .hero-subtitle { color: var(--gray); font-size: 1rem; max-width: 480px; margin-top: 22px; line-height: 1.7; }
+    .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+    .hero-trust { display: flex; align-items: center; gap: 8px; margin-top: 20px; color: rgba(255,255,255,0.45); font-size: 0.82rem; }
+
+    #stats { background: var(--dark); padding: 48px clamp(20px, 6vw, 100px); border-bottom: 1px solid var(--border); }
+    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); max-width: 1280px; margin: 0 auto; }
+    .stat-item { flex: 1; text-align: center; padding: 0 24px; border-right: 1px solid var(--border); display: flex; flex-direction: column; align-items: center; }
+    .stat-item:first-child { padding-left: 0; }
+    .stat-item:last-child { border-right: none; padding-right: 0; }
+    
+    .stat-icon-wrap { display: flex; justify-content: center; align-items: center; margin-bottom: 4px; }
+    .stat-store-icon { width: 40px; height: 40px; color: var(--white); }
+
+    .stat-number { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 2.6rem; color: var(--white); line-height: 1; }
+    .stat-text { font-size: 1.6rem; }
+    .stat-divider { width: 36px; height: 2px; background: var(--red); margin: 9px 0; }
+    .stat-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray); }
+    .stats-trust { text-align: center; color: rgba(255,255,255,0.35); font-size: 0.78rem; letter-spacing: 0.04em; padding-top: 28px; border-top: 1px solid var(--border); margin-top: 28px; grid-column: 1 / -1; }
+
+    .section-label { display: inline-block; color: var(--red); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 600; margin-bottom: 8px; }
+    .section-h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(2rem, 4vw, 3.2rem); text-transform: uppercase; letter-spacing: -0.02em; line-height: 1; }
+    .section-h2.dark { color: var(--black); }
+    .section-h2.light { color: var(--white); }
+    .section-sub { max-width: 540px; margin: 10px auto 0; line-height: 1.7; font-size: 0.93rem; }
+    .section-sub.dark { color: #666; }
+    .section-sub.light { color: var(--gray); }
+    .section-header { text-align: center; margin-bottom: 40px; }
+
+    #produtos { background: var(--white); padding: clamp(80px, 9vw, 120px) clamp(20px, 6vw, 100px); }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      max-width: 1280px;
+      margin: 0 auto;
+      align-items: stretch;
+      isolation: isolate;
+    }
+
+    .product-card {
+      background: var(--white); border-radius: 8px; border: 1px solid #e5e5e5;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex; flex-direction: column;
+    }
+    @media (hover: hover) {
+    .product-card:hover { box-shadow: 0 16px 48px rgba(0,0,0,0.22), 0 4px 12px rgba(0,0,0,0.12); transform: scale(1.03); }
+    }
+
+    .product-img {
+      aspect-ratio: 1/1; background: #e8e8e8; position: relative;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      border-radius: 8px 8px 0 0; overflow: hidden;
+    }
+    .product-img-text { color: #aaa; font-size: 0.75rem; text-align: center; padding: 12px; }
+
+    .badge {
+      position: absolute; top: 10px; left: 10px; background: var(--red); color: var(--white);
+      font-size: 0.65rem; padding: 3px 10px; border-radius: 20px; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .badge-compat {
+      position: absolute; bottom: 10px; left: 10px;
+      color: rgba(255,255,255,0.75); font-size: 0.62rem;
+      font-weight: 500; letter-spacing: 0.04em;
+    }
+
+    .product-body {
+      padding: 18px; display: flex; flex-direction: column; flex: 1;
+    }
+
+    .product-name { font-weight: 700; font-size: 0.95rem; color: var(--black); line-height: 1.3; }
+    .product-desc { color: #555; font-size: 0.8rem; margin-top: 5px; line-height: 1.55; flex: 1; }
+
+    .product-compat { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; justify-content: center; }
+    .compat-tag { font-size: 0.65rem; background: #f0f0f0; color: #555; padding: 3px 8px; border-radius: 20px; font-weight: 500; }
+
+    /* btn-card is always at bottom */
+
+    .products-cta-area { text-align: center; margin-top: 32px; }
+    .btn-products-cta { white-space: nowrap; text-align: center; }
+    .btn-br { display: inline; }
+    .mobile-br { display: none; }
+    .products-cta-text { color: #666; font-size: 0.86rem; margin-bottom: 12px; }
+
+    #diferenciais { background: var(--black); padding: clamp(80px, 9vw, 120px) clamp(20px, 6vw, 100px); }
+
+    .diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1280px; margin: 0 auto; isolation: isolate; }
+
+    .diff-card {
+      background: var(--card-dark); border-radius: 8px; border: 1px solid rgba(255,255,255,0.06);
+      padding: 28px; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s, background 0.2s;
+    }
+    @media (hover: hover) {
+    .diff-card:hover { border-color: rgba(237,28,36,0.5); background: #1a1a1a; transform: scale(1.03); box-shadow: 0 12px 32px rgba(0,0,0,0.5); }
+    }
+
+    .diff-icon-wrap {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 44px; height: 44px; border-radius: 8px; background: rgba(204,0,0,0.12);
+      margin-bottom: 16px;
+    }
+    .diff-icon-wrap i { color: var(--red); width: 22px; height: 22px; }
+
+    .diff-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.25rem; color: var(--white); text-transform: uppercase; margin-bottom: 8px; }
+    .diff-text { color: var(--gray); font-size: 0.9rem; line-height: 1.7; }
+
+    #tutoriais { background: var(--dark); padding: clamp(56px, 7vw, 88px) clamp(20px, 6vw, 100px); border-top: 1px solid var(--border); }
+    .tutoriais-inner { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; }
+    .tutoriais-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--red); }
+    .tutoriais-eyebrow svg { flex-shrink: 0; }
+    .tutoriais-h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(1.7rem, 3.5vw, 2.6rem); text-transform: uppercase; letter-spacing: -0.02em; color: var(--white); line-height: 1.05; }
+    .tutoriais-text { color: var(--gray); font-size: 0.95rem; line-height: 1.75; max-width: 680px; }
+    .tutoriais-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--red); color: #fff; font-size: 0.8rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      padding: 15px 30px; border-radius: 4px; margin-top: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    @media (hover: hover) { .tutoriais-btn:hover { background: #c00; transform: translateY(-2px); } }
+    #sobre { background: var(--dark); padding: clamp(80px, 9vw, 120px) clamp(20px, 6vw, 100px); }
+    .sobre-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; max-width: 1280px; margin: 0 auto; }
+    .sobre-accent { width: 36px; height: 2px; background: var(--red); margin-bottom: 14px; }
+    .sobre-label { color: var(--red); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 600; margin-bottom: 10px; }
+    .sobre-h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(1.9rem, 3.5vw, 3rem); color: var(--white); text-transform: uppercase; letter-spacing: -0.02em; line-height: 1; }
+    .sobre-text { color: var(--gray); font-size: 0.95rem; line-height: 1.75; margin-top: 16px; }
+    .sobre-img { border-radius: 8px; border-left: 4px solid var(--red); overflow: hidden; }
+
+    #faq { background: var(--black); padding: clamp(80px, 9vw, 120px) clamp(20px, 6vw, 100px); }
+    .faq-inner { max-width: 720px; margin: 0 auto; }
+    /* FAQ — details/summary nativo */
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+
+    .faq-question {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 18px 0; color: var(--white); font-size: 0.93rem; font-weight: 600;
+      cursor: pointer; list-style: none; line-height: 1.4; font-family: 'Inter', sans-serif;
+    }
+    .faq-question::-webkit-details-marker { display: none; }
+    .faq-question:hover { color: #ddd; }
+    .faq-question::after {
+      content: "›"; color: var(--red); font-size: 22px; font-weight: 400;
+      transition: rotate 0.3s ease; display: inline-block; flex-shrink: 0;
+      rotate: 90deg;
+    }
+    details[open] .faq-question::after { rotate: 270deg; }
+
+    .faq-answer {
+      color: var(--gray); font-size: 0.9rem; line-height: 1.75; padding-bottom: 18px;
+    }
+
+    #cta-final { background: var(--red); padding: clamp(48px, 5vw, 64px) clamp(20px, 6vw, 100px); }
+
+    .cta-inner { max-width: 680px; margin: 0 auto; text-align: center; }
+    .cta-h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(2rem, 4.5vw, 3.4rem); color: var(--white); text-transform: uppercase; letter-spacing: -0.02em; line-height: 1; }
+    .cta-text { color: rgba(255,255,255,0.85); font-size: 0.98rem; margin: 14px auto 0; max-width: 500px; line-height: 1.65; }
+
+    .cta-checklist {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px 48px;
+      max-width: 600px; margin: 24px auto 0; text-align: left;
+    }
+    .cta-check-item { white-space: nowrap; }
+    .cta-check-item { display: flex; align-items: flex-start; gap: 9px; color: var(--white); font-size: 0.86rem; line-height: 1.4; }
+    .cta-check-item i { flex-shrink: 0; margin-top: 1px; width: 16px; height: 16px; }
+
+    .btn-cta-white {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--white); color: var(--red); border-radius: 4px;
+      padding: 18px 48px; font-weight: 800; font-size: 0.9rem;
+      text-transform: uppercase; letter-spacing: 0.08em; border: none; cursor: pointer;
+      margin-top: 28px; transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none; text-align: center;
+    }
+    .btn-cta-white:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(0,0,0,0.22); }
+
+    #contato { background: var(--black); border-top: 1px solid var(--border); padding: 52px clamp(20px, 6vw, 100px) 28px; }
+
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1.5fr 1fr; gap: 40px; padding-bottom: 32px; border-bottom: 1px solid var(--border); max-width: 1280px; margin: 0 auto; }
+
+    .footer-logo-img { height: 48px; width: auto; display: block; mix-blend-mode: screen; }
+
+    .footer-tagline { color: #555; font-size: 0.82rem; margin-top: 12px; line-height: 1.6; }
+    .footer-col-title { color: var(--white); font-weight: 600; font-size: 0.86rem; margin-bottom: 12px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer-links a { color: #555; font-size: 0.82rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-contact-text { color: #555; font-size: 0.82rem; margin-bottom: 12px; line-height: 1.6; }
+
+    .btn-wa {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #25D366; color: var(--white); padding: 10px 16px; border-radius: 4px;
+      font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-wa:hover { background: #1eb85a; transform: scale(1.04); box-shadow: 0 8px 28px rgba(37,211,102,0.45); }
+    .btn-wa i { width: 15px; height: 15px; }
+
+    .social-icons { display: flex; gap: 12px; margin-top: 4px; }
+    .social-icon-btn {
+      display: flex; align-items: center; justify-content: center;
+      width: 40px; height: 40px; border-radius: 8px;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .social-icon-btn:hover { background: rgba(237,28,36,0.2); border-color: rgba(237,28,36,0.3); }
+
+    .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding-top: 24px; max-width: 1280px; margin: 0 auto; }
+    .footer-bottom span { color: #333; font-size: 0.76rem; }
+    .footer-address { color: #444 !important; font-size: 0.75rem !important; }
+
+    #float-wa { position: fixed; bottom: 22px; right: 22px; z-index: 999; }
+    .float-wa-btn {
+      display: flex; align-items: center; justify-content: center;
+      height: 52px; border-radius: 26px; background: #25D366;
+      padding: 0 15px;
+      box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+      position: relative; max-width: 52px; overflow: hidden;
+      transition: max-width 0.3s ease, padding 0.3s ease, box-shadow 0.2s, transform 0.2s;
+    }
+    .float-wa-label {
+      color: white; font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.06em; white-space: nowrap;
+      max-width: 0; overflow: hidden; opacity: 0; margin-right: 0;
+      transition: max-width 0.3s ease, opacity 0.2s ease, margin 0.3s ease;
+    }
+    .float-wa-btn:hover { transform: scale(1.05); box-shadow: 0 8px 28px rgba(37,211,102,0.5); max-width: 180px; padding: 0 18px; }
+    .float-wa-btn:hover .float-wa-label { max-width: 120px; opacity: 1; margin-right: 8px; }
+    .float-wa-btn i { width: 22px; height: 22px; color: white; }
+
+    /* scroll offset para navbar fixa */
+    #produtos, #diferenciais, #sobre, #tutoriais, #faq, #cta-final, #contato { scroll-margin-top: var(--nav-h); }
+
+    @media (max-width: 1100px) {
+      .product-grid { grid-template-columns: repeat(2, 1fr); }
+      .diff-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .mobile-overlay { display: flex; }
+      #hero { min-height: 480px; }
+      .hero-content { padding: 24px clamp(20px, 5vw, 40px) 0; }
+      .hero-h1 { font-size: clamp(2.6rem, 10vw, 4rem); }
+      .hero-subtitle { font-size: 0.9rem; }
+
+      .stats-grid { grid-template-columns: 1fr; gap: 0; }
+      .stat-item { border-right: none; border-bottom: 1px solid var(--border); padding: 24px 0; }
+      .stat-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+      .product-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .product-card:hover { transform: none; }
+
+      .diff-grid { grid-template-columns: 1fr; gap: 16px; }
+
+      .sobre-grid { grid-template-columns: 1fr; gap: 28px; }
+      .sobre-img { display: none; }
+
+      .faq-inner { max-width: 100%; }
+
+      .cta-checklist { grid-template-columns: 1fr; max-width: 100%; gap: 10px; }
+      .cta-h2 { font-size: clamp(1.8rem, 8vw, 2.8rem); }
+      .btn-cta-white { width: 100%; padding: 18px 24px; box-sizing: border-box; }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; align-items: center; text-align: center; gap: 6px; }
+    }
+
+    @media (max-width: 480px) {
+      .product-grid { grid-template-columns: 1fr; }
+      .product-card:hover { transform: none; }
+      .hero-label { margin-bottom: 10px; }
+      .hero-buttons { flex-direction: column; }
+      .btn-red, .btn-outline { width: 100%; justify-content: center; }
+      .mobile-overlay .btn-red { width: auto !important; align-self: center; }
+      .diff-card { padding: 20px; }
+      #produtos, #diferenciais, #sobre, #faq, #cta-final { padding: clamp(48px, 8vw, 80px) 20px; }
+      #stats { padding: 36px 20px; }
+      #contato { padding: 40px 20px 24px; }
+      .section-h2 { font-size: clamp(1.6rem, 7vw, 2.4rem); }
+      .cta-checklist { max-width: 280px; }
+      .btn-products-cta { white-space: normal; line-height: 1.4; }
+      .mobile-br { display: inline; }
+    }
+    /* Scrollbar customizada */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0A0A0A; }
+    ::-webkit-scrollbar-thumb { background: var(--red); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--red-hover); }
+
+  
+  /* Mobile tap feedback */
+  .btn-red:active, .btn-cta-white:active, .btn-card:active, .nav-cta:active {
+    transform: scale(0.97); transition: transform 0.1s;
+  }
+  .btn-wa:active, .float-wa-btn:active { transform: scale(0.96); transition: transform 0.1s; }
+
+  /* Navbar scroll shadow */
+  #navbar.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.4); }
+
+  /* Accessibility: respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+    [data-animate] { opacity: 1 !important; translate: 0 0 !important; }
+    #hero-video { display: none; }
+  }
+
+</style>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+</head>
+<body>
+
+  <nav id="navbar">
+    <!-- SVG logo inline — high quality, no raster blur -->
+<a href="index.html" aria-label="Tech Racing — página inicial"><img src="assets/img/logo-nav.png" class="nav-logo-img" alt="Tech Racing" width="120" height="44" fetchpriority="high" /></a>
+
+    <ul class="nav-links">
+      <li><a href="#produtos">Produtos</a></li>
+      <li><a href="#diferenciais">Diferenciais</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#tutoriais">Tutoriais</a></li>
+      <li><a href="#faq">Dúvidas</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+
+    <a href="https://www.mercadolivre.com.br/loja/tech-racing" target="_blank" class="nav-cta" rel="noopener noreferrer">COMPRAR NO MERCADO LIVRE</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <a href="#produtos" class="mobile-nav-link">Produtos</a>
+    <a href="#diferenciais" class="mobile-nav-link">Diferenciais</a>
+    <a href="#sobre" class="mobile-nav-link">Sobre</a>
+    <a href="#tutoriais" class="mobile-nav-link">Tutoriais</a>
+    <a href="#faq" class="mobile-nav-link">Dúvidas</a>
+    <a href="#contato" class="mobile-nav-link">Contato</a>
+    <a href="https://www.mercadolivre.com.br/loja/tech-racing" target="_blank" class="btn-red" rel="noopener noreferrer">COMPRAR NO MERCADO LIVRE</a>
+  </div>
+
+  <section id="hero">
+    <video id="hero-video" muted loop playsinline autoplay preload="none" data-src="hero-bg.mp4" poster="assets/img/hero-poster.jpg"></video>
+    <div class="hero-overlay"></div>
+    <div class="hero-bottom-fade"></div>
+    <div class="hero-content">
+      <span class="hero-label">Fabricação própria · Loja oficial no Mercado Livre</span>
+      <h1 data-animate data-delay="80" class="hero-h1">
+        ACESSÓRIOS PARA UTV COM <span class="accent">ENCAIXE PRECISO</span> E DESEMPENHO NA TRILHA.
+      </h1>
+      <p data-animate data-delay="160" class="hero-subtitle">
+        Projetados, fabricados e testados em campo pela Tech Racing para os principais UTVs do mercado brasileiro. Disponíveis na nossa loja oficial do Mercado Livre com compra protegida e entrega rastreada.
+      </p>
+      <div data-animate data-delay="240" class="hero-buttons">
+        <a href="#produtos" class="btn-red">VER PRODUTOS →</a>
+        <a href="https://www.mercadolivre.com.br/loja/tech-racing" target="_blank" class="btn-outline" rel="noopener noreferrer">NOSSA LOJA NO MERCADO LIVRE</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="stats">
+    <div class="stats-grid">
+      <div data-animate data-delay="0" class="stat-item">
+        <div class="stat-icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="stat-store-icon">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-label">Loja oficial verificada no Mercado Livre</div>
+      </div>
+      <div data-animate data-delay="80" class="stat-item">
+        <div class="stat-icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="stat-store-icon">
+            <rect x="1" y="3" width="15" height="13" rx="1"/>
+            <path d="M16 8h4l3 3v5h-7V8z"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-label">Entrega para todo o Brasil</div>
+      </div>
+      <div data-animate data-delay="160" class="stat-item">
+        <div class="stat-icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="stat-store-icon">
+            <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/>
+            <path d="m3.3 7 8.7 5 8.7-5"/>
+            <path d="M12 22V12"/>
+          </svg>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-label">+1.000 pedidos entregues</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="produtos">
+    <div data-animate data-delay="0" class="section-header">
+      <span class="section-label">O que a Tech Racing fabrica</span>
+      <h2 class="section-h2 dark">PEÇAS PARA UTV QUE VOCÊ NÃO ACHA EM QUALQUER LUGAR</h2>
+      <p class="section-sub dark">Cada produto nasceu de uma demanda específica da trilha e foi projetado para um único propósito: funcionar no seu UTV.</p>
+    </div>
+
+    <div class="product-grid">
+      <!-- Card 1 -->
+      <div data-animate data-delay="0" class="product-card">
+        <div class="product-img">
+          <img src="assets/img/produto-suporte-jbl.png" alt="Suporte JBL Boombox para UTV Tech Racing" loading="lazy" width="400" height="400" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <span class="badge">MAIS VENDIDO</span>
+          <span class="badge-compat">Consulte compatibilidade</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Suporte para JBL Boombox</div>
+          <div class="product-desc">Fixação firme e sem vibração, desenvolvido para encaixar diretamente no seu UTV.</div>
+          <a href="https://www.mercadolivre.com.br/loja/tech-racing" target="_blank" class="btn-card" rel="noopener noreferrer">VER NO MERCADO LIVRE →</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div data-animate data-delay="60" class="product-card">
+        <div class="product-img">
+          <img src="assets/img/produto-manopla-cambio.png" alt="Manopla de Câmbio para UTV Tech Racing" loading="lazy" width="400" height="400" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <span class="badge-compat">Consulte compatibilidade</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Manopla de Câmbio para UTV</div>
+          <div class="product-desc">Encaixe preciso e acabamento que se percebe no toque. Para quem valoriza função e identidade na cabine do UTV.</div>
+          <a href="https://www.mercadolivre.com.br/loja/tech-racing" target="_blank" class="btn-card" rel="noopener noreferrer">VER NO MERCADO LIVRE →</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div data-animate data-delay="120" class="product-card">
+        <div class="product-img">
+          <img src="assets/img/produto-bolsa-teto.png" alt="Bolsa de Teto para UTV Tech Racing" loading="lazy" width="400" height="400" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <span class="badge-compat">Consulte compatibilidade</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Bolsa de Teto para UTV</div>
+          <div class="product-desc">Espaço adicional com acesso rápido em qualquer ponto da trilha. Material resistente e fixação desenvolvida para uso em campo.</div>
+          <a href="https://www.mercadolivre.com.br/loja/tech-racing" target="_blank" class="btn-card" rel="noopener noreferrer">VER NO MERCADO LIVRE →</a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div data-animate data-delay="180" class="product-card">
+        <div class="product-img">
+          <img src="assets/img/produto-saca-parafuso.png" alt="Parafuso para Sacar CVT de UTV Tech Racing" loading="lazy" width="400" height="400" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <span class="badge-compat">Consulte compatibilidade</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Saca Parafuso CVT</div>
+          <div class="product-desc">Manutenção em campo sem risco de dano ao componente. Ferramenta indispensável para quem mantém o UTV em ordem.</div>
+          <a href="https://www.mercadolivre.com.br/loja/tech-racing" target="_blank" class="btn-card" rel="noopener noreferrer">VER NO MERCADO LIVRE →</a>
+        </div>
+      </div>
+    </div>
+
+    <div data-animate data-delay="0" class="products-cta-area">
+      <p class="products-cta-text">Quer ver todos os produtos disponíveis na loja?</p>
+      <a href="https://www.mercadolivre.com.br/loja/tech-racing" target="_blank" class="btn-red btn-products-cta" rel="noopener noreferrer">VER TODOS OS PRODUTOS<br class="mobile-br"> NO MERCADO LIVRE</a>
+    </div>
+  </section>
+
+  <section id="diferenciais">
+    <div data-animate data-delay="0" class="section-header">
+      <span class="section-label">Por que a Tech Racing</span>
+      <h2 class="section-h2 light">NÃO REVENDEMOS. FABRICAMOS CADA PEÇA.</h2>
+      <p class="section-sub light">A Tech Racing projeta, fabrica e testa cada acessório antes de colocar à venda. Não terceirizamos e não revendemos genérico. Você sente essa diferença no primeiro encaixe.</p>
+    </div>
+
+    <div class="diff-grid">
+      <div data-animate data-delay="0" class="diff-card">
+        <div class="diff-icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;color:var(--red)"><path d="M2 20h20"/><path d="M5 20V8l6 4V8l6 4V4h3v16"/><path d="M2 20v-4h3"/></svg>
+        </div>
+        <div class="diff-title">FABRICAÇÃO PRÓPRIA</div>
+        <p class="diff-text">Do projeto ao acabamento, tudo passa pelas nossas mãos. Controlamos o material, o encaixe e a qualidade final sem depender de fornecedores externos.</p>
+      </div>
+      <div data-animate data-delay="100" class="diff-card">
+        <div class="diff-icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;color:var(--red)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <div class="diff-title">TESTADO EM CAMPO</div>
+        <p class="diff-text">Nenhum produto é comercializado sem antes ser instalado e testado em UTVs reais. O processo de validação em campo é parte do nosso padrão de fabricação.</p>
+      </div>
+      <div data-animate data-delay="200" class="diff-card">
+        <div class="diff-icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;color:var(--red)"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div class="diff-title">SUPORTE ANTES E DEPOIS</div>
+        <p class="diff-text">Não sabe se encaixa no seu modelo? Nossa equipe confirma antes da compra. Sem achismo, sem surpresa na instalação.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="sobre-grid">
+      <div data-animate data-delay="0">
+        <div class="sobre-accent"></div>
+        <div class="sobre-label">Sobre a Tech Racing</div>
+        <h2 class="sobre-h2">NASCEMOS NA TRILHA.<br>CONSTRUÍMOS NA BANCADA.</h2>
+        <p class="sobre-text">A Tech Racing nasceu da frustração de quem usa UTV de verdade. Acessórios que não encaixavam e peças genéricas que não duravam foram o ponto de partida para fabricarmos o que o mercado não entregava.</p>
+        <p class="sobre-text" style="margin-top:14px;">Hoje cada peça sai daqui com material selecionado, encaixe testado em campo e acabamento consistente. Não somos revendedores. Somos fabricantes e você percebe essa diferença na primeira instalação.</p>
+        <p class="sobre-text" style="margin-top:14px;">Nossos produtos já rodaram em trilhas e eventos por todo o Brasil. Todos estão disponíveis na loja oficial da Tech Racing no Mercado Livre, com compra protegida, pagamento parcelado e entrega rastreada para qualquer estado do Brasil.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;">
+
+          <a href="sobre-nos.html" class="btn-outline" style="margin-top:24px;display:inline-flex;">NOSSA HISTÓRIA →</a>
+        </div>
+      </div>
+      <div data-animate data-delay="100">
+        <!-- Replace with photo: alt="Produtos Tech Racing para UTV em ação" -->
+        <div class="sobre-img" style="padding:0;overflow:hidden;"><img src="assets/img/utv-competicao.jpg" alt="UTVs em competição off-road - Tech Racing" loading="lazy" width="600" height="400" style="width:100%;height:auto;display:block;" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="faq-inner">
+      <div class="section-header">
+        <span class="section-label">Dúvidas</span>
+        <h2 class="section-h2 light">PERGUNTAS FREQUENTES</h2>
+      </div>
+
+      <details class="faq-item">
+        <summary class="faq-question">Os acessórios servem para o meu UTV?</summary>
+        <div class="faq-answer">Trabalhamos com os principais modelos do mercado brasileiro. A compatibilidade pode variar conforme o ano e a versão, por isso recomendamos confirmar com nossa equipe pelo WhatsApp antes de finalizar a compra.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Qual suporte para JBL Boombox é compatível com o meu UTV?</summary>
+        <div class="faq-answer">A Tech Racing oferece suportes para diferentes modelos de JBL Boombox. A escolha correta depende tanto do modelo do seu Boombox quanto do UTV. Entre em contato pelo WhatsApp informando os dois e nossa equipe indica o suporte adequado.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Como faço para comprar? A entrega é para todo o Brasil?</summary>
+        <div class="faq-answer">Todos os produtos estão disponíveis na loja oficial da Tech Racing no Mercado Livre, com compra protegida, pagamento parcelado e entrega rastreada para qualquer estado.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">A instalação é complicada?</summary>
+        <div class="faq-answer">Não. Todos os produtos foram desenvolvidos para instalação direta, sem necessidade de modificações no UTV. Em caso de dúvida durante a montagem, nossa equipe está disponível pelo WhatsApp.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Os produtos têm garantia?</summary>
+        <div class="faq-answer">Sim. Toda compra realizada pela loja oficial no Mercado Livre está coberta pela garantia da plataforma. Em caso de qualquer problema, basta entrar em contato.</div>
+      </details>
+    </div>
+  </section>
+
+  <section id="cta-final">
+    <div data-animate data-delay="0" class="cta-inner">
+      <h2 class="cta-h2">SEU UTV MERECE PEÇA<br>DE QUEM ENTENDE.</h2>
+      <p class="cta-text">Fabricação própria, testada em campo e comercializada com a segurança do Mercado Livre. Acesse a loja oficial, escolha o seu produto e finalize a compra com tranquilidade.</p>
+      <div class="cta-checklist">
+        <div class="cta-check-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex-shrink:0;margin-top:1px;color:rgba(255,255,255,0.9)"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          Compra protegida e pagamento parcelado
+        </div>
+        <div class="cta-check-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex-shrink:0;margin-top:1px;color:rgba(255,255,255,0.9)"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+          Entrega rastreada para todo o Brasil
+        </div>
+        <div class="cta-check-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex-shrink:0;margin-top:1px;color:rgba(255,255,255,0.9)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Garantia assegurada pelo Mercado Livre
+        </div>
+        <div class="cta-check-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex-shrink:0;margin-top:1px;color:rgba(255,255,255,0.9)"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+          Loja oficial verificada na plataforma
+        </div>
+      </div>
+      <a href="https://www.mercadolivre.com.br/loja/tech-racing" target="_blank" class="btn-cta-white" rel="noopener noreferrer">
+        ACESSAR LOJA NO MERCADO LIVRE
+      </a>
+    </div>
+  </section>
+
+  <section id="tutoriais">
+    <div class="tutoriais-inner" data-animate data-delay="0">
+      <span class="tutoriais-eyebrow">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        Canal Tech Racing no YouTube
+      </span>
+      <h2 class="tutoriais-h2">INSTALE CERTO.<br>ASSISTA ANTES DE MONTAR.</h2>
+      <p class="tutoriais-text">Antes de instalar qualquer peça Tech Racing, acesse nosso canal e veja o vídeo da instalação. Mostramos encaixe real, ferramentas necessárias e os detalhes que fazem diferença — modelo a modelo, sem enrolação. Canal ideal para quem tem Can-Am, Polaris, CF Moto, Yamaha ou Honda UTV e quer instalar com segurança.</p>
+      <a href="https://www.youtube.com/@TechRacingOffRoadoficial" target="_blank" rel="noopener noreferrer" class="tutoriais-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        VER VÍDEOS DE INSTALAÇÃO
+      </a>
+    </div>
+  </section>
+
+  <footer id="contato">
+    <div class="footer-grid">
+      <div>
+<img src="assets/img/logo-footer.png" class="footer-logo-img" alt="Tech Racing" loading="lazy" width="160" height="48" />
+        <p class="footer-tagline">Fabricante de acessórios para os principais UTVs do mercado brasileiro. Loja oficial verificada no Mercado Livre. Produtos desenvolvidos para Can-Am, Polaris, CF Moto, Yamaha, Honda e aplicações universais. Entregamos para todo o Brasil: São Paulo, Minas Gerais, Rio Grande do Sul, Mato Grosso do Sul e demais estados.</p>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Navegação</div>
+        <ul class="footer-links">
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#tutoriais">Tutoriais</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
+          <li><a href="https://www.mercadolivre.com.br/loja/tech-racing" target="_blank" rel="noopener noreferrer">Mercado Livre</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Dúvidas?</div>
+        <p class="footer-contact-text">Não sabe se o produto encaixa no seu UTV? Fale com a gente antes de comprar.</p>
+        <a href="https://wa.me/5531991250009?text=Ol%C3%A1!%20Estava%20no%20site%20da%20Tech%20Racing%20e%20tenho%20uma%20d%C3%BAvida.%20Pode%20me%20ajudar%3F" target="_blank" class="btn-wa" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:15px;height:15px;flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          FALAR NO WHATSAPP
+        </a>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Redes Sociais</div>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/tech_racing_off_road/" target="_blank" aria-label="Instagram" class="social-icon-btn" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;color:#fff"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@TechRacingOffRoadoficial" target="_blank" aria-label="YouTube" class="social-icon-btn" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;color:#fff"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="footer-year"></span> Tech Racing. Todos os direitos reservados.</span>
+      <span class="footer-address">R. Santana, 823 - Universitário, Itaúna - MG, 35680-329, Brasil</span>
+    </div>
+  </footer>  <div id="float-wa">
+    <a href="https://wa.me/5531991250009?text=Ol%C3%A1!%20Estava%20no%20site%20da%20Tech%20Racing%20e%20tenho%20uma%20d%C3%BAvida.%20Pode%20me%20ajudar%3F" target="_blank" class="float-wa-btn" rel="noopener noreferrer">
+      <span class="float-wa-label">Fale conosco</span>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:22px;height:22px;color:white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileOverlay.classList.contains('open');
+      if (isOpen) {
+        mobileOverlay.style.display = 'none';
+        mobileOverlay.classList.remove('open');
+        hamburger.classList.remove('open');
+        document.body.style.overflow = '';
+      } else {
+        mobileOverlay.style.display = 'flex';
+        mobileOverlay.offsetHeight;
+        mobileOverlay.classList.add('open');
+        hamburger.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileOverlay.style.display = 'none';
+        mobileOverlay.classList.remove('open');
+        hamburger.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          document.body.style.overflow = '';
+          requestAnimationFrame(function() {
+            const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 64;
+            const top = target.getBoundingClientRect().top + window.pageYOffset - navH;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+          });
+        }
+      });
+    });
+
+    // Animações — substitui AOS com IntersectionObserver nativo
+    (function() {
+      var els = document.querySelectorAll('[data-animate]');
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var el = entry.target;
+            var delay = parseInt(el.getAttribute('data-delay') || '0');
+            setTimeout(function() { el.classList.add('animated'); }, delay);
+            observer.unobserve(el);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function(el) { observer.observe(el); });
+    })();
+    (function() {
+      var video = document.getElementById('hero-video');
+      if (!video) return;
+      function tryPlay() {
+        if (!video.src && video.dataset.src) {
+          video.src = video.dataset.src;
+        }
+        video.load();
+        var p = video.play();
+        if (p !== undefined) {
+          p.catch(function(err) {
+            if (err.name === 'NotAllowedError') { video.style.display = 'none'; }
+          });
+        }
+      }
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            tryPlay();
+          } else {
+            video.pause();
+          }
+        });
+      }, { threshold: 0.1 });
+      observer.observe(document.getElementById('hero'));
+      // Safari sometimes needs a nudge on load
+      if (document.readyState === 'complete') { tryPlay(); }
+      else { window.addEventListener('load', tryPlay); }
+    })();
+  
+    // Navbar scroll shadow
+    (function() {
+      var nav = document.getElementById('navbar');
+      window.addEventListener('scroll', function() {
+        nav.classList.toggle('scrolled', window.scrollY > 10);
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
