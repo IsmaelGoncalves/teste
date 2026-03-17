@@ -464,7 +464,7 @@
       transition-duration: 0.01ms !important;
     }
     [data-animate] { opacity: 1 !important; translate: 0 0 !important; }
-    #hero-video { display: none; }
+    #hero-video { visibility: hidden; }
   }
 
 </style>
@@ -504,7 +504,9 @@
   </div>
 
   <section id="hero">
-    <video id="hero-video" muted loop playsinline autoplay preload="none" data-src="hero-bg.mp4" poster="assets/img/hero-poster.jpg"></video>
+    <video id="hero-video" muted loop playsinline autoplay preload="none" poster="assets/img/hero-poster.jpg">
+      <source src="hero-bg.mp4" type="video/mp4">
+    </video>
     <div class="hero-overlay"></div>
     <div class="hero-bottom-fade"></div>
     <div class="hero-content">
@@ -875,31 +877,21 @@
     (function() {
       var video = document.getElementById('hero-video');
       if (!video) return;
+      var started = false;
       function tryPlay() {
-        if (!video.src && video.dataset.src) {
-          video.src = video.dataset.src;
-        }
+        if (started) return;
+        started = true;
         video.load();
-        var p = video.play();
-        if (p !== undefined) {
-          p.catch(function(err) {
-            if (err.name === 'NotAllowedError') { video.style.display = 'none'; }
-          });
-        }
-      }
-      var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            tryPlay();
-          } else {
-            video.pause();
-          }
+        video.play().catch(function(err) {
+          if (err.name === 'NotAllowedError') video.style.visibility = 'hidden';
         });
-      }, { threshold: 0.1 });
-      observer.observe(document.getElementById('hero'));
-      // Safari sometimes needs a nudge on load
-      if (document.readyState === 'complete') { tryPlay(); }
-      else { window.addEventListener('load', tryPlay); }
+      }
+      if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        tryPlay();
+      } else {
+        document.addEventListener('DOMContentLoaded', tryPlay);
+      }
+      window.addEventListener('load', tryPlay);
     })();
   
     // Navbar scroll shadow
